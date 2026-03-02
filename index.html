@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Giriş</title>
+</head>
+<body>
+
+<h2>Giriş Yap</h2>
+
+<input type="text" id="user" placeholder="Kullanıcı Adı"><br><br>
+<input type="password" id="pass" placeholder="Şifre"><br><br>
+
+<button onclick="giris()">Giriş</button>
+
+<p id="uyari" style="color:red;"></p>
+
+<script>
+  function giris() {
+    const user = document.getElementById("user").value;
+    const pass = document.getElementById("pass").value;
+
+    if (user === "admin" && pass === "1234") {
+      window.location.href = "pdf.html";
+    } else {
+      document.getElementById("uyari").innerText = "Kullanıcı adı veya şifre yanlış";
+    }
+  }
+</script>
+
+</body>
+</html>
